@@ -1,0 +1,38 @@
+form
+	display: flex
+	flex-direction: column
+
+.input-box
+	margin: 10px 0
+
+.button, button
+	border: 0
+	text-decoration: none
+	font-size: 1.2em
+	text-align: center
+	width: 80%
+	margin: 5px 0
+	box-shadow: 1px 3px 5px #222
+	align-self: center
+
+	&:hover
+		cursor: pointer
+
+	&:active
+		box-shadow: 1px 4px 6px #999
+
+	&.edit
+		background: orange
+		color: black
+
+	&.delete
+		background: red
+		color: white
+	
+	&.green
+		background: green
+		color: white
+
+.error
+	color: red
+	font-weight: 700

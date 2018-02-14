@@ -1,0 +1,51 @@
+<form #newForm="ngForm" (submit)="createProduct(newForm)">
+
+  <div class="input-box">
+    <div class="input">
+      <label>Title:</label>
+      <input
+        type="text"
+        name="title"
+        [(ngModel)]="newProduct.title"
+        #title="ngModel"
+        required
+        minlength="4">
+    </div>
+
+    <div class="input-errors" *ngIf="title.errors && (title.touched || title.dirty)">
+      <span class="error" *ngIf="title.errors.required">Title required.</span>
+      <span class="error" *ngIf="title.errors.minlength">Title must be 4 or more characters.</span>
+    </div>
+  </div>
+
+
+  <div class="input-box">
+    <div class="input">
+      <label>Price:</label>
+      <input
+        type="number"
+        name="price"
+        [(ngModel)]="newProduct.price"
+        #price="ngModel"
+        required>
+    </div>
+
+    <div class="input-errors" *ngIf="price.errors && (price.touched || price.dirty)">
+      <span class="error" *ngIf="price.errors.required">Price is required.</span>
+    </div>
+  </div>
+
+
+  <div class="input-box">
+    <div class="input">
+      <label>Image Url:</label>
+      <input
+        type="text"
+        name="image"
+        [(ngModel)]="newProduct.img"
+        #img="ngModel">
+    </div>
+  </div>
+
+  <button [disabled]="!newForm.form.valid" class="green" type="submit">Create</button>
+</form>

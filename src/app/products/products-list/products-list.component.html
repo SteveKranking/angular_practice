@@ -1,0 +1,9 @@
+<h1>Products List</h1>
+
+<div class="products">
+  <app-product-detail 
+    *ngFor="let product of _products; index as i"
+    [product]="product"
+    [pos]="i"
+    (removeProduct)="deleteProduct(i)"></app-product-detail>
+</div>

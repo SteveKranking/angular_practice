@@ -1,0 +1,7 @@
+<div class="container">
+  <!--img[src]-->
+  <h3>{{_product.title}}</h3>
+  <h4>{{_product.price | currency:'USD':true}}</h4>
+  <a class="button edit" [routerLink]="['/products', 'edit', _pos]">Edit</a>
+  <button class="button delete" (click)="removeProduct.emit()">Delete</button>
+</div>

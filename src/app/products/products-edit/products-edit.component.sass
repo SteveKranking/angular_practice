@@ -1,0 +1,30 @@
+
+.button, button
+	border: 0
+	text-decoration: none
+	font-size: 1.2em
+	text-align: center
+	width: 80%
+	margin: 5px 0
+	box-shadow: 1px 3px 5px #222
+
+	&:hover
+		cursor: pointer
+
+	&:active
+		box-shadow: 1px 4px 6px #999
+
+	&.edit
+		background: orange
+		color: black
+
+	&.delete
+		background: red
+		color: white
+
+	&.blue
+		background: blue
+		color: white
+
+		&[disabled]
+			background: lighten(blue, 20%)
